@@ -17,18 +17,13 @@ export default function Home() {
                 className="container50">
                     <h2 id="first-name" className="name">MALLORY</h2>
                     <h2>Full Stack Developer</h2>
-                    {/* <Keyboard /> */}
+                    <Keyboard />
                     <h2>Graphic Designer</h2>
                     <h2 id="last-name" className="name">PRESCOTT</h2>
                 </div>
 
             </header>
 
-            
-            <h2>Software Engineer & Designer</h2>
-            <p>
-                I'm a specialist in computer science, creative technology, and design. I have a passion for accessibility, universal design, and responsive features.
-            </p>
             <h3>Sorry for the mess! This site is under heavy renovation</h3>
 
             <main id='maincontent'>

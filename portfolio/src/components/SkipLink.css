@@ -8,13 +8,13 @@
 
     margin-right: 1rem;
     position: absolute;
-    transform: translateX(-400%);
+    transform: translateY(-400%);
     transition: transform 0.3s;
 }
   
 .skip-link:focus {
     position: static;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
   
