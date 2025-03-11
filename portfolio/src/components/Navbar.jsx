@@ -1,5 +1,4 @@
 // import './Navbar.css';
-// import petermad from "/src/assets/petermad.png"
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {

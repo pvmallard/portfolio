@@ -1,0 +1,14 @@
+.splines{
+    object-fit: scale-down;
+    opacity: 0;
+    overflow: visible;
+
+    /* transition: opacity 0.6s ease-out; */
+    animation: fadeIn 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,6 +1,6 @@
-// import './Navbar.css';
+// import './About.css';
 
-export default function Navbar() {
+export default function About() {
     
     return (
         <h1>About</h1>

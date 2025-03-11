@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* colors: 
+    white: #FFFFFF
+    light: #F1EEEC
+    sienna: #D94F04
+    mustard: #F29325
+    blue: #007172
+    dark blue: #025259
+    black: #000000
+*/
+
+/* css reset */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,7 +26,104 @@
   text-align: center;
 }
 
-.logo {
+body {
+  font-size: 15px;
+  background: #F1EEEC;
+  font-family: "Roboto", sans-serif;
+  color: #121212;
+}
+
+.container {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: "Expletus Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2{font-size: 2em;}
+h3{font-size: 1.7em;}
+
+p {
+  margin: 1.8em 0;
+  line-height: 1.8em;
+  font-size: 1.1em;
+}
+
+.mainImg {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+header{
+  height: 100vh;
+}
+
+figure {
+  text-align: center;
+  display: flex column;
+  justify-content: center;
+
+}
+
+
+/* screen size responsiveness */
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* dark mode */
+/* @media (prefers-color-scheme: dark) {
+body {
+  color: #eee;
+  background: linear-gradient(-45deg, darkslategray 0%, darkslategray 25%, darkslategray 51%, #121212 100%);
+  background-color: #121212;
+}
+
+body a {
+  color: #809fff;
+}
+
+.red, .white {
+  background-color: rgba(255,255,255,0.1);
+}
+  
+footer {
+  background-color: #121212;
+}
+} */
+
+
+/* @keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+} */
+
+
+
+
+
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -40,3 +158,8 @@
 .read-the-docs {
   color: #888;
 }
+
+.mainImg {
+  max-width: 300px;
+  max-height: 300px;
+} */

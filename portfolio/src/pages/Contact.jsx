@@ -1,6 +1,6 @@
-// import './Navbar.css';
+// import './Contact.css';
 
-export default function Navbar() {
+export default function Contact() {
     
     return (
         <h1>Contact</h1>

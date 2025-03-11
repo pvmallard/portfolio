@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import './App.css'
+import './components/SkipLink.css';
 import Auth from "./components/auth.jsx"
 import { db } from './config/firebase'
 import { getDocs, collection, addDoc } from 'firebase/firestore'
@@ -11,7 +12,10 @@ import About from './pages/About.jsx'
 import Projects from './pages/Projects.jsx'
 import Contact from './pages/Contact.jsx'
 
+import Footer from './components/Footer.jsx'
+
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+
 
 function App() {
   const [projectList, setProjectList] = useState([]);
@@ -42,22 +46,15 @@ function App() {
 
   return (
 
-    <LocomotiveScrollProvider
-      options={{smooth: true}}
-      containerRef={containerRef}
-    >
-    
-    <div className='container' data-scroll-containter ref={containerRef}>
+    // <LocomotiveScrollProvider
+    //   options={{smooth: true}}
+    //   watch={[]}
+    //   containerRef={containerRef}
+    // >
+
+    <div className='container' data-scroll-container ref={containerRef}>
 
       <a className="skip-link" href="#maincontent">Skip to main content</a>
-
-      <header>
-        <h1 class="sr-only">Mallory Prescott's Profile</h1>
-        <div data-scroll data-scroll-speed="0.4" class="container50">
-            <h2 id="first-name" class="name">MALLORY</h2>
-            <h2 id="last-name" class="name">PRESCOTT</h2>
-        </div>
-      </header>
 
       <Router>
         <Navbar />
@@ -70,23 +67,10 @@ function App() {
         </Routes>
       </Router>
 
-      <main id='maincontent'>
+      <Footer/>
 
-        <div>
-          {projectList.map((project) => (
-            <div>
-              <h2 style={{ color: project.completed ? "green" : "red" }}> 
-                {project.title}
-              </h2>
-              <p>Finished: {project.finished}</p>
-            </div>
-          ))}
-        </div>
-
-      </main>
     </div>
-
-    </LocomotiveScrollProvider>
+    // </LocomotiveScrollProvider>
   )
 }
 
