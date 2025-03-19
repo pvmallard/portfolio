@@ -1,4 +1,5 @@
 // import './Projects.css';
+import ProjectBox from '../components/ProjectBox.jsx';
 
 import { useEffect, useState, useRef } from 'react'
 import { db } from '../config/firebase'
@@ -29,6 +30,11 @@ export default function Projects() {
       useEffect(() => {
         getProjectList();
       }, []);
+
+      // function toProject(event, correct, pete){
+      //   // if no next question, toResults()
+      //   return
+      // }
     
     return (
         <div data-scroll-section>
@@ -44,23 +50,65 @@ export default function Projects() {
             </header>
 
             <main id='maincontent'>
+
+                <section>
+                  <h2>Web Development</h2>
+                  <p>Accessibility, UI/UX Design, Frontend Design</p>
+        
                   {projectList.map((project) => (
-                    <div>
-                      <h2>
-                         {/* style={{ color: project.completed ? "green" : "red" }}>  */}
-                        {project.title}
-                      </h2>
-                      <figure>
-                          <img 
-                            src={project.imageMainURL}
-                            alt={project.alt}
-                            className='mainImg'
-                          />
-                      </figure>
-                      <p>Finished: {project.finished}</p>
-                    </div>
+
+                    project.type === "web" && (
+                      <ProjectBox project={project} />
+                    )
+
                   ))}
+                </section>
+                
+                <section>
+                  <h2>Graphic Design</h2>
+                  <p>Typography, Grids/Patterns, Design Elements</p>
+
+        
+                  {projectList.map((project) => (
+
+                    project.type === "graphic" && (
+                      <ProjectBox project={project} />
+                    )
+
+                  ))}
+                </section>
+
+                <section>
+                  <h2>Game Development</h2>
+                  <p>Prototyping, Graphics/Animations, Audio Design</p>
+
+        
+                  {projectList.map((project) => (
+
+                    project.type === "game" && (
+                      <ProjectBox project={project} />
+                    )
+
+                  ))}
+                </section>
+
+                <section>
+                  <h2>Additional Design</h2>
+                  <p>Engineering Design, Software Design, Fine Arts</p>
+        
+                  {projectList.map((project) => (
+
+                    project.type === "other" && (
+                      <ProjectBox project={project} />
+                    )
+
+                  ))}
+                </section>
+
             </main>
+
+            
+            
         </div>
     );
 }

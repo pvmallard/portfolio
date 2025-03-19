@@ -11,6 +11,7 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Projects from './pages/Projects.jsx'
 import Contact from './pages/Contact.jsx'
+import Project from './pages/Project.jsx'
 
 import Footer from './components/Footer.jsx'
 
@@ -64,6 +65,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/project/:project" element={<Project />} />
         </Routes>
       </Router>
 
